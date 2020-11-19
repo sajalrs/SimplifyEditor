@@ -26,7 +26,7 @@ import java.util.*
 import java.util.regex.Pattern
 
 private const val TAG = "TAG"
-private const val COMPLEXITY = 400
+private const val COMPLEXITY = 1000
 
 class EditorFragment:Fragment() {
 private lateinit var editorEditText: EditText
@@ -43,7 +43,7 @@ private lateinit var complexWords: MutableList<String>
         val view = inflater.inflate(R.layout.editor_fragment_layout, container, false)
 
         editorEditText = view.findViewById(R.id.answerEditText) as EditText
-        questionText = view.findViewById(R.id.questionTextView) as TextView
+//        questionText = view.findViewById(R.id.questionTextView) as TextView
         complexWords = mutableListOf<String>()
 
         return view;

@@ -18,7 +18,7 @@ class WordFreqFetchr {
 
     init {
         val retrofit: Retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.0.30:5000/")
+            .baseUrl("http://192.168.0.19:5000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         wordFreqApi= retrofit.create(WordFreqApi::class.java)

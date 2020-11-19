@@ -16,9 +16,10 @@ def api_all():
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="INSERT_PASSWORD",
+        password="root",
         database="simplify"
     )
+
 
     cur = conn.cursor()
     cur.execute(query, to_filter)
@@ -60,15 +61,15 @@ def api_filter():
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="INSERT_PASSWORD",
+        password="root",
         database="simplify"
     )
+
 
     cur = conn.cursor()
     cur.execute(query, to_filter)
     results = [dict((cur.description[i][0], value)
                     for i, value in enumerate(row)) for row in cur.fetchall()]
     return jsonify(results=results)
-
 
 app.run(host='0.0.0.0')
