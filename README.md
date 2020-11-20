@@ -21,7 +21,7 @@ Words that aren't commenly used are highlighted in red
 To no one's surprise nursery rhymes mostly contain common words
 </p>
 On the front end, the android application makes requests to the REST API as words are typed and highlights the word if its frequency is lower than a predefined constant.
-Future iterations of the app can have a slider to determine the level of complexity of these words. The android application uses the Retrofit library to make the api calls and 
+Future iterations of the app can have a slider to determine the level of complexity of these words. The application follows the Model View Controller architecture. It uses the Retrofit library to make the api calls and 
 gson to convert the JSON objects into Kotlin data class objects.
 </br>
 </br>
